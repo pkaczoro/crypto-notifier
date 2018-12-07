@@ -30,4 +30,10 @@ public class ExchangeTest {
         return response.toString();
     }
 
+
+    @RequestMapping("/test-websocket")
+    String wsTest() {
+        return "dupa";
+    }
+
 }
