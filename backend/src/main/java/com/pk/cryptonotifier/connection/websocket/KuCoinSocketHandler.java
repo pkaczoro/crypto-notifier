@@ -1,19 +1,16 @@
 package com.pk.cryptonotifier.connection.websocket;
 
-import com.google.gson.Gson;
 import org.springframework.stereotype.Component;
-import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 
 @Component
-public class SocketHandler extends TextWebSocketHandler {
+public class KuCoinSocketHandler extends TextWebSocketHandler {
 
     List<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
 

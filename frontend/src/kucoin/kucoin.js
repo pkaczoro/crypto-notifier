@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import AppRouter from "./router/menu";
 
 
-
-class App extends Component {
+class KuCoin extends Component {
     wsConnection;
     state = {
       greeting: "", connected: false
@@ -56,11 +52,33 @@ class App extends Component {
 
     render() {
         return (
-            <AppRouter></AppRouter>
+          <div className="App">
+            <header className="App-header">
+                KUCOIN
+                <div> connected: {this.state.connected ? "yes": "no"} </div>
+                <Button variant="contained" color="primary" onClick={this.connect}>
+                    Connect
+                </Button>
+                <Button variant="contained" color="primary" onClick={this.disconnect}>
+                    Disconnect
+                </Button>
+
+                <TextField
+                    id="standard-name"
+                    label="Message value"
+                    value={this.state.name}
+                    onChange={this.handleChange('name')}
+                    margin="normal"
+                />
+                <Button variant="contained" color="primary" onClick={this.sendName}>
+                    Send message
+                </Button>
+            </header>
+
+
+          </div>
         );
     }
-
-
 }
 
-export default App;
+export default KuCoin;
