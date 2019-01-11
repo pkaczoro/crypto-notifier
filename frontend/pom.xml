@@ -40,7 +40,7 @@
 						<outputDirectory>${basedir}/target/classes/public</outputDirectory>
 						<resources>
 							<resource>
-								<directory>${project.basedir}/build</directory>
+								<directory>${project.basedir}/dist</directory>
 							</resource>
 						</resources>
 					</configuration>

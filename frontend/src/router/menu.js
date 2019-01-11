@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Test from "../test/test";
-import KuCoin from "../kucoin/kucoin";
+import Test from "../modules/test/test";
+import KuCoin from "../modules/kucoin/kucoin";
 
 const TestMenuItem = () => <Test />;
 const KuCoinMenuItem = () => <KuCoin />;
